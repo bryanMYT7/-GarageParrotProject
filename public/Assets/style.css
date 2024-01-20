@@ -1,0 +1,139 @@
+/**
+**Charcoal gray #36454F
+**Goldenrod #DAA520
+**Forest Green  #228B22
+**Navy Blue #001F3F
+
+**/
+header{
+    background-image: url("/Assets/images/background.jpg");
+    height: 90vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.logo{
+    height: 18vh;
+    width: 11vw;
+}
+.SlogWrapp {
+    height: 74vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color:white;
+    text-shadow: 1px 1px 2px #001F3F;
+}
+.SlogBt{
+    color:#DAA520;
+}
+.navbar-toggler{
+    color: #36454F;
+}
+nav {
+    background-color: #001F3F;
+
+}
+.navbar ul  a{
+    color:white;
+    font-size: 1.5rem;
+}
+.navbar ul  a:hover{
+    color:white;
+    font-size: 1.5rem;
+}
+.ServicesWrappdiv {
+    position: absolute;
+    top: 70vh;
+    left: 4vw;
+}
+.ServicesWrappdiv .ServiceDiv {
+    height: 20em;
+    width: 15em;
+    background-color:#36454F;
+    margin: 2em;
+}
+
+/*ServiceDivWrappImg*/
+.ServiceDivWrappImg img {
+    height: 15em;
+    width: 15em;
+    object-fit:cover;
+}
+
+.ServiceDivWrappCont {
+    height: 5em;
+    width: 15em;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*AboutUsWrapp*/
+.aboutUsSect{
+    height: 70vh;
+    padding: 3em;
+    transform: translateX(10%);
+}
+.aboutUsSect img{
+    height: 40vh;
+    width: 15vw;
+    object-fit:cover;
+    margin: 1em;
+}
+.aboutUsSect .aboutText {
+    margin: 1em;
+}
+.aboutText {
+    overflow:scroll;
+}
+/*buttons*/
+.btn{
+    background-color:#DAA520;
+}
+/*h1*/
+h1 {
+    color:#DAA520;
+}
+h2 {
+    color:#001F3F;
+}
+.ImgCars{
+    height: 10em;
+    width: 18em;
+    object-fit: cover;
+}
+
+.ArticlesWrapp {
+    background-color:#36454F;
+    padding: 2em;
+    width: auto;
+}
+.ServWrappImg {
+    height: 30em;
+    width:auto;
+    margin-left: 2em;
+    position: relative;
+   
+}
+.ServWrappSect {
+    margin: 2em;
+    
+}
+.ServWrappDiv {
+    height: 6em;
+    width: 20em;
+    color:#001F3F;
+    position: absolute;
+    background-color:white;
+    box-shadow: 2px 2px 1px #001F3F;
+    margin-left: 50vh;
+    margin-top: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

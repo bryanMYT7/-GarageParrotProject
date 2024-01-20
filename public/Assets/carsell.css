@@ -1,0 +1,29 @@
+body{
+    overflow-x: hidden;
+}
+
+/**Gérer les h3*/
+h3{
+   color: #228B22;
+}
+/*ImgCars*/
+.ImgCars{
+    height: 10em;
+    width: 18em;
+    object-fit: cover;
+}
+
+.ArticlesWrapp  {
+   background-color: teal;
+   padding: 2rem;
+   margin: 1em;
+}
+
+Aside {
+    padding: 2em;
+    margin: 1em;
+}
+
+.SellFilterI {
+    height: 3em;
+}

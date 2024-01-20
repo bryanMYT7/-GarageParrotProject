@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% include "/components/menu.html.twig" %}
+<html>
+    <head>
+    <link rel="stylesheet" href="/Assets/carsell.css"> 
+        {% block stylesheets %} {% endblock %}
+    </head>
+    <body>
+        <main class="row justify-content-center">
+            <h3 class="text-center">Retrouvez une large gamme de véhicule d'occasions à des prix avantageux</h3>
+                <div class="d-flex d-flex justify-content-between">
+                    <aside class="row col-3  d-flex flex-column ">
+                        <div class="SellFilterWrapp">
+                            <i class="fa-solid fa-filter SellFilterI"></i> Filtres
+                            <div class="Model-BrandWrapp">
+                                <form method="POST" action="{{ path('car_display') }}">
+                                    {{ form_row(form.brand) }}
+                                    {{ form_row(form.model) }}
+                                <button type="submit">Filter</button>
+                        </form>
+                            <hr>
+                            <div class="caracteristics">
+                                <h4>Caractéristiques</h4>
+                                <label for="Year" class="form-group">Année</label>
+                                <div class="d-flex m-3">
+                                    <input type="text" name="yearMin" id="year" class="form-control p-1 m-1 text-center" placeholder="Année Min">
+                                    <input type="text" name="yearMax" id="year" class="form-control p-1 m-1 text-center" placeholder="Année Max">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="prices">
+                                <h4>Prix</h4>
+                                <div class="form-group d-flex m-3">
+                                    <input type="text" name="priceMin" id="price" class="form-control p-1 m-1 text-center" placeholder="Prix Min">
+                                    <input type="text" name="priceMax" id="price" class="form-control p-1 m-1 text-center" placeholder="Prix Max">
+                                </div>
+                            </div>
+                                <button type="submit" class="btn btn-success">Rechercher</button>
+                            </form>
+                        </div>
+                     </aside>
+                    <div class="ArticlesWrapp row d-flex justify-content-center m-1 col-9">
+                    <h6>Voitures occasions offres disponibles</h6>
+                    {% for car in cars %}
+                            <div class="card m-2" style="width:20rem">
+                            <div class="card-body">
+                            <h4 class="card-title text-center"></h4>
+                            <p class="card-text d-flex justify-content-center"> 
+                                <img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}">
+                                <h2 class="text-center">{{car.brand}}</h2>
+                                <h3>{{car.model}}</h3>
+                                <h5>{{car.price}}€</h5>
+                                <h6>{{car.kilometers}}</h6>
+                            </p>
+                            </div>
+                      </div>
+                    {% endfor %}
+                </div>
+                
+                </div>
+        </main>
+        {% block body %}{% endblock %}
+    </body>
+    
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% include '/components/menu.html.twig' %}
+<html>
+{% block stylesheets %}
+            
+        {% endblock %}
+
+        {% block javascripts %}
+            
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+                <div class="formWrapp m-3 row ">
+                    <div class="p-4 m-3 d-flex justify-content-center">
+                    {{form_start(form, {"attr":{"novalidate":"novalid"}})}}
+                    {{form_rest(form)}}
+                        
+                        <input  class="btn btn-success mt-2" type="submit" value="Créer le compte">
+                            <div>
+                                <a href="/login" class="btn btn-link">Se Connecter</a>
+                            </div>
+                </div>
+        </div>
+        {% block body %}{% endblock %}
+{% include '/components/footer.html.twig' %}
+    </body>
+</html>

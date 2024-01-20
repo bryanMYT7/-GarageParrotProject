@@ -1,0 +1,9 @@
+
+ body{
+    position: relative;
+}
+footer {
+    background-color:#001F3F;
+    position: absolute;
+    bottom: 0;
+}

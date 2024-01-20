@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% include '/components/headerHome.html.twig' %}
+<html>
+    <head>
+    <link rel="stylesheet" href="/Assets/style.css"> 
+        {% block stylesheets %} {% endblock %}
+    </head>
+    <body>
+        <main class="row">
+            <h1 class="text-center">À Propos de nous </h1>
+            <div class="aboutUsSect col-10 d-flex justify-content-center">
+                <img class="d-flex align-self-end" src="/Assets/images/pexels-cottonbro-studio-4489712.jpg" alt="">
+                <img  src="/Assets/images/pexels-cottonbro-studio-4489712.jpg" alt="">
+                <div class="aboutText ">
+                   <div class="">
+                         <h2 class="">Notre Histoire</h2>
+                         <p>Chez [Nom du Garage], nous ne sommes pas simplement un garage ; nous sommes des passionnés d'automobile dévoués à offrir un service exceptionnel et des soins de qualité à vos véhicules. Forts d'une passion pour tout ce qui touche à l'automobile, notre équipe de techniciens qualifiés s'engage à fournir des services de réparation, d'entretien et de personnalisation de premier ordre. Fondé en [Année], nous avons bâti une réputation de fiabilité et d'excellence dans l'industrie automobile. Notre installation ultramoderne est équipée des dernières technologies, nous permettant de diagnostiquer et de résoudre efficacement une large gamme de problèmes de véhicules.</p>
+                         <button class="btn ">En découvrir Plus</button>
+                   </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <h1 class="text-center">Services</h1>
+                <div class="ServWrappSect col-7 d-flex ">
+                    <div class="aboutText">
+                    <div class="">
+                         <h2 class="">FAITES APPEL À VOTRE GARAGISTE</h2>
+                         <div class="d-flex align-items-center">
+                            <ul>
+                                <li>Entretien mécanique</li>
+                                <li>Travaux de carrosserie automobile</Li>
+                                <li>Peinture automobile</li>
+                            </ul>
+                            <ul>
+                                <li>Réparations mécaniques</li>
+                                <li>Vente de véhicules d’occasion</Li>
+                                <li>Location de véhicules</li>
+                            </ul>
+                         </div>
+                    </div>
+                    </div>
+                    <img class="ServWrappImg" src="/Assets/images/pexels-cottonbro-studio-4489712.jpg" alt="">
+                    <div class="ServWrappDiv">POUR UNE EXPÉRIENCE EXCEPTIONNEL</div>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-center">Achat de véhicules d'occasions</h1>
+                <div class="ArticlesWrapp row d-flex justify-content-center m-1 col-5">
+                <!--Partie Affichage-->
+                    {% for car in Car %}
+                            <div class="card m-2" style="width:30rem">
+                            <div class="card-body">
+                            <h4 class="card-title text-center"></h4>
+                            <p class="card-text d-flex justify-content-center"> 
+                                <img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}">
+                                <h2 class="text-center">{{car.brand}}</h2>
+                                <h3>{{car.model}}</h3>
+                                <h5>{{car.price}}</h5>
+                                <h6>{{car.kilometers}}</h6>
+                            </p>
+                            <!--Redirige le visiteur vers la liste des ingrédients, génère une page avec le titre.....description-->
+                            
+                            </div>
+                      </div>
+                    {% endfor %}
+            </div>
+            </div>
+            </div>
+        </main>
+        {% block body %}{% endblock %}
+    </body>
+
+
+</html>

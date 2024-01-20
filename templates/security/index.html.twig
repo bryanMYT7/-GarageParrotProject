@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% include '/components/menu.html.twig' %}
+   {% block body %}
+    {% if error %}
+       <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <div  class="container m-4 p-2">
+        <form method="POST" action="{{ path('login') }}" class="container FormWrapp col-7">
+            <label for="username" class="form-label"> Nom d'utilisateur</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control">
+
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" id="password" name="_password" class="form-control">
+
+            <input type="hidden" name="_target_path" value="/">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            
+            <button type="submit" class="btn btn-success mt-3">Connexion</button>
+            <div>
+                <a class="btn btn-link">Vous n'avez pas de compte</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
