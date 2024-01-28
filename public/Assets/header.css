@@ -1,9 +1,7 @@
-/**
-**Charcoal gray #36454F
-**Goldenrod #DAA520
-**Forest Green  #228B22
-**Navy Blue #001F3F
-**/
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Montserrat", sans-serif;
+}
 header{
     height: 20vh;
     width: 100vw;

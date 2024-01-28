@@ -5,9 +5,12 @@
 **Navy Blue #001F3F
 
 **/
+body {
+    font-family: "Montserrat", sans-serif;
+}
 header{
     background-image: url("/Assets/images/background.jpg");
-    height: 90vh;
+    height: 93vh;
     width: 100vw;
     background-position: center;
     background-size: cover;
@@ -99,6 +102,11 @@ nav {
 h1 {
     color:#DAA520;
 }
+.separator {
+    border-bottom: 4px dotted black;
+    width: 7em;
+    margin: 1em;
+}
 h2 {
     color:#001F3F;
 }
@@ -136,4 +144,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.AccBtn{
+    background-color: green;
+    border-radius: 5%;
 }
