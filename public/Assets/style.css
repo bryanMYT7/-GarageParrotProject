@@ -10,7 +10,7 @@ body {
 }
 header{
     background-image: url("/Assets/images/background.jpg");
-    height: 93vh;
+    height: calc(93vh + 15px);
     width: 100vw;
     background-position: center;
     background-size: cover;
@@ -31,13 +31,13 @@ header{
     text-shadow: 1px 1px 2px #001F3F;
 }
 .SlogBt{
-    color:#DAA520;
+    color:#daa520e0;
 }
 .navbar-toggler{
     color: #36454F;
 }
 nav {
-    background-color: #001F3F;
+    background-color: #001f3f7b;
 
 }
 .navbar ul  a{
@@ -50,13 +50,15 @@ nav {
 }
 .ServicesWrappdiv {
     position: absolute;
-    top: 70vh;
+    top: calc(76vh + 10px);
     left: 4vw;
 }
+
+
 .ServicesWrappdiv .ServiceDiv {
     height: 20em;
     width: 15em;
-    background-color:#36454F;
+    background-color:#36454fbf;
     margin: 2em;
 }
 
@@ -78,7 +80,7 @@ nav {
 
 /*AboutUsWrapp*/
 .aboutUsSect{
-    height: 70vh;
+    height: 74vh;
     padding: 3em;
     transform: translateX(10%);
 }
@@ -96,57 +98,106 @@ nav {
 }
 /*buttons*/
 .btn{
-    background-color:#DAA520;
+    background-color:#daa520b3;
 }
 /*h1*/
 h1 {
     color:#DAA520;
 }
 .separator {
-    border-bottom: 4px dotted black;
+    border-bottom: 4px dotted rgba(0, 0, 0, 0.749);
     width: 7em;
     margin: 1em;
 }
 h2 {
     color:#001F3F;
 }
+h3 {
+    font-weight: 800;
+    color:#DAA520;
+    text-shadow: 1px 1px 2px lightgray;
+}
+h5 {
+    color:#001f3fa1;
+}
 .ImgCars{
-    height: 10em;
-    width: 18em;
+    height: 20vh;
+    width: 100%;
     object-fit: cover;
 }
 
 .ArticlesWrapp {
-    background-color:#36454F;
+    background-color:#36454f19;
     padding: 2em;
     width: auto;
+    
 }
 .ServWrappImg {
-    height: 30em;
+    height: 45vh;
     width:auto;
-    margin-left: 2em;
+    margin: 1em;
     position: relative;
-   
 }
 .ServWrappSect {
     margin: 2em;
     
 }
 .ServWrappDiv {
-    height: 6em;
-    width: 20em;
+    height: 6vh;
+    width: 20vw;
     color:#001F3F;
     position: absolute;
-    background-color:white;
-    box-shadow: 2px 2px 1px #001F3F;
-    margin-left: 50vh;
-    margin-top: 45vh;
+    background-color:lightgray;
+    box-shadow: 2px 2px 1px gray;
+    margin-left: 30vw;
+    margin-top: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: calc(1em - 5px);
 }
 
 .AccBtn{
     background-color: green;
     border-radius: 5%;
+}
+
+.TimesTitle  {
+    color:#36454F;
+    font-weight: 700;
+}
+.OpenTimesWrapp {
+    color:#001f3fc8;
+    font-size: 1.5em;
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    height: 60vh;
+    text-align: center;
+}
+
+.OpenTimesWrapp ul li {
+    list-style: none;
+}
+.ImgWrappPrice {
+    position: relative;
+    background-color: red;
+}
+
+.ImgWrappPrice span {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    background-color:#daa520b6;
+    padding-right:0.5em;
+    padding-left: 0.5em;
+    color:white;
+    text-shadow: 1px 1px 2px black;
+}
+
+@media screen and (max-width: 1280px) {
+ .SlogBt {
+     display: none;
+ }
 }

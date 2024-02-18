@@ -43,16 +43,17 @@
                     <h6>Voitures occasions offres disponibles</h6>
                     {% for car in cars %}
                             <div class="card m-2" style="width:20rem">
-                            <div class="card-body">
-                            <h4 class="card-title text-center"></h4>
                             <p class="card-text d-flex justify-content-center"> 
-                                <img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}">
-                                <h2 class="text-center">{{car.brand}}</h2>
-                                <h3>{{car.model}}</h3>
-                                <h5>{{car.price}}€</h5>
-                                <h6>{{car.kilometers}}</h6>
+                                <div class="ImgWrappPrice"><img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}"><span>{{car.price}}€</span></div>
+                                <h3>{{car.brand}}</h3>
+                                <h5>{{car.model}}</h5>
+                                <h5>{{car.kilometers}}km</h5>
+                                <hr></hr>
+                                <h4>{{car.price}}€</h4>
+                                <span class=" d-flex justify-content-center">
+                                    <button type="button" class="btn">Détails</button>
+                                </span>
                             </p>
-                            </div>
                       </div>
                     {% endfor %}
                 </div>

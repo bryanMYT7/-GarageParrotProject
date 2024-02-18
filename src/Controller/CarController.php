@@ -7,6 +7,7 @@ use App\Entity\Avis;
 use App\Form\CarType;
 use App\Form\ImageType;
 use App\Form\FormType;
+use App\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

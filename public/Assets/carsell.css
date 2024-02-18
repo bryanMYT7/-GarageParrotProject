@@ -4,9 +4,19 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
-/**Gérer les h3*/
-h3{
-   color: #228B22;
+.ImgWrappPrice {
+    position: relative;
+}
+
+.ImgWrappPrice span {
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    background-color:#daa520b6;
+    padding-right:0.5em;
+    padding-left: 0.5em;
+    color:white;
+    text-shadow: 1px 1px 2px black;
 }
 /*ImgCars*/
 .ImgCars{
@@ -16,7 +26,7 @@ h3{
 }
 
 .ArticlesWrapp  {
-   background-color: teal;
+   background-color:#36454f19;
    padding: 2rem;
    margin: 1em;
 }
@@ -28,4 +38,12 @@ Aside {
 
 .SellFilterI {
     height: 3em;
+}
+h3 {
+    font-weight: 800;
+    color:#DAA520;
+    text-shadow: 1px 1px 2px lightgray;
+}
+h5 {
+    color:#001f3fa1;
 }

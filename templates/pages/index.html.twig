@@ -17,7 +17,7 @@
                 <div class="aboutText ">
                    <div class="">
                          <h2 class="">Notre Histoire</h2>
-                         <p>Chez [Nom du Garage], nous ne sommes pas simplement un garage ; nous sommes des passionnés d'automobile dévoués à offrir un service exceptionnel et des soins de qualité à vos véhicules. Forts d'une passion pour tout ce qui touche à l'automobile, notre équipe de techniciens qualifiés s'engage à fournir des services de réparation, d'entretien et de personnalisation de premier ordre. Fondé en [Année], nous avons bâti une réputation de fiabilité et d'excellence dans l'industrie automobile. Notre installation ultramoderne est équipée des dernières technologies, nous permettant de diagnostiquer et de résoudre efficacement une large gamme de problèmes de véhicules.</p>
+                         <p>Nous ne sommes pas simplement un garage ; nous sommes des passionnés d'automobile dévoués à offrir un service exceptionnel et des soins de qualité à vos véhicules. Forts d'une passion pour tout ce qui touche à l'automobile, notre équipe de techniciens qualifiés s'engage à fournir des services de réparation, d'entretien et de personnalisation de premier ordre. Fondé en [Année], nous avons bâti une réputation de fiabilité et d'excellence dans l'industrie automobile. Notre installation ultramoderne est équipée des dernières technologies, nous permettant de diagnostiquer et de résoudre efficacement une large gamme de problèmes de véhicules.</p>
                          <button class="btn ">En découvrir Plus</button>
                    </div>
                 </div>
@@ -50,27 +50,40 @@
                 </div>
             </div>
             <div>
+            <div class="OpenTimesWrapp  m-0">
+                <h2 class="text-center TimesTitle">Horaires d'ouverture</h2>
+                <ul >
+                    <li>lundi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>mardi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>mercredi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>jeudi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>vendredi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>samedi: 08:45 - 12:00, 14:00 - 18:00<li>
+                    <li>dimanche: Fermé<li>
+                </ul>
+            </div>
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <h1 class="text-center">Achat de véhicules d'occasion</h1>
-                <div class="separator text-center"></div>
                 </div>
                 <div class="ArticlesWrapp row d-flex justify-content-center m-1 col-5">
                 <!--Partie Affichage-->
                     {% for car in Car %}
-                            <div class="card m-2" style="width:30rem">
-                            <div class="card-body">
-                            <h4 class="card-title text-center"></h4>
+                            <div class="card m-2" style="width:28rem">
                             <p class="card-text d-flex justify-content-center"> 
-                                <img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}">
-                                <h2 class="text-center">{{car.brand}}</h2>
-                                <h3>{{car.model}}</h3>
-                                <h5>{{car.price}}</h5>
-                                <h6>{{car.kilometers}}</h6>
+                                <div class="ImgWrappPrice"><img class="ImgCars" src="{{asset('uploads/' ~ car.imageFilename)}}"><span>{{car.price}}€</span></div>
+                                <h3>{{car.brand}}</h3>
+                                <h5>{{car.model}}</h5>
+                                <h5>{{car.kilometers}}km</h5>
+                                <hr></hr>
+                                <h4>{{car.price}}€</h4>
+                                <span class=" d-flex justify-content-center">
+                                    <button type="button" class="btn">Détails</button>
+                                </span>
                             </p>
                             <!--Redirige le visiteur vers la liste des ingrédients, génère une page avec le titre.....description-->
                             
                             </div>
-                      </div>
+                    
                     {% endfor %}
             </div>
             </div>
